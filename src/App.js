@@ -1,5 +1,7 @@
 //import './App.css';
 import React, { Component } from 'react';
+
+import Container from './components/container/Container';
 import Statistics from './components/statistics/Statistics';
 import FeedbackOptions from './components/feedbackOptions/FeedbackOptions';
 import Section from './components/section/Section';
@@ -37,7 +39,7 @@ class App extends Component {
     const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
 
     return (
-     <>
+     <Container>
         <Section title={'Please leave feedback'}>
         <FeedbackOptions
           options={options}
@@ -53,7 +55,7 @@ class App extends Component {
           positivePercentage={positiveFeedbackPercentage}
         />
         </Section>
-     </>
+     </Container>
     );
   }
 }
